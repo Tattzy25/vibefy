@@ -85,7 +85,7 @@
     "dispatch_namespaces": [
         {
             "binding": "DISPATCHER",
-            "namespace": "vibesdk-default-namespace",
+            "namespace": "vibefy-default-namespace",
             "remote": false
         }
     ],
