@@ -174,5 +174,11 @@
 	},
 	"overrides": {
 		"@cloudflare/containers": "^0.0.28"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "bun",
+			"version": "latest"
+		}
 	}
 }

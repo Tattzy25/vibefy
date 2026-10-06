@@ -86,7 +86,7 @@
         {
             "binding": "DISPATCHER",
             "namespace": "vibesdk-default-namespace",
-            "remote": true
+            "remote": false
         }
     ],
     "artifacts": [
@@ -115,13 +115,14 @@
 		}
 	],
 	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_name": "vibefy-db",
-			"database_id": "916c420a-a602-4282-bbc1-e8172280d3ac",
-			"migrations_dir": "migrations"
-		}
-	],
+        {
+            "binding": "DB",
+            "database_name": "vibefy-db",
+            "database_id": "916c420a-a602-4282-bbc1-e8172280d3ac",
+            "migrations_dir": "migrations",
+            "remote": true
+        }
+    ],
 	"durable_objects": {
 		"bindings": [
 			{
@@ -156,15 +157,18 @@
         }
     ],
     "r2_buckets": [
-      {
-        "binding": "TEMPLATES_BUCKET",
-        "bucket_name": "vibefy-bucket","preview_bucket_name": "vibefy-bucket"
-      }
+        {
+            "binding": "TEMPLATES_BUCKET",
+            "bucket_name": "vibefy-bucket",
+            "preview_bucket_name": "vibefy-bucket",
+            "remote": true
+        }
     ],
     "kv_namespaces": [
         {
             "binding": "VibecoderStore",
-            "id": "19c4ea03586045dc8423cc63850182d1"
+            "id": "16e948fe0f5c4332b4997712c7b47ae4",
+            "remote": true
         }
     ],
     // "placement": {
@@ -205,13 +209,13 @@
 	],
 	"routes": [
         {
-            "pattern": "build.cloudflare.dev",
+            "pattern": "vibefy.anigok.com",
             "custom_domain": true
         },
         {
-            "pattern": "*build-preview.cloudflare.dev/*",
+            "pattern": "*vibefy.anigok.com/*",
             "custom_domain": false,
-            "zone_id": "db01fac4261b2604aacad8410443a3e2"
+            "zone_id": "ea8eb9b28a21b38ea03d6e8cca6136b4"
         }
     ],
 	"vars": {
