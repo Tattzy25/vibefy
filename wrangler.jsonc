@@ -53,20 +53,7 @@
 		}
 	},
     "unsafe": {
-        "bindings": [
-            {
-                "name": "API_RATE_LIMITER",
-                "type": "ratelimit",
-                "namespace_id": "2101",
-                "simple": { "limit": 100000, "period": 60 }
-            },
-            {
-                "name": "AUTH_RATE_LIMITER",
-                "type": "ratelimit",
-                "namespace_id": "2102",
-                "simple": { "limit": 100000, "period": 60 }
-            }
-        ]
+        "bindings": []
     },
 	/**
 	 * Bindings
