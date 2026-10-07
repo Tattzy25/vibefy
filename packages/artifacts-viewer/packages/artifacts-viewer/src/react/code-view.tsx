@@ -72,14 +72,14 @@ export function CodeView({
     // oxlint-disable-next-line exhaustive-deps
   }, [themeKey, name]);
 
-  const fileOptions = useMemo<FileOptions<undefined>>(() => {
+  const fileOptions = useMemo<FileOptions<unknown, any>>(() => {
     return {
       theme,
       themeType,
       unsafeCSS,
       disableFileHeader: true,
       overflow: "scroll",
-      onPostRender(node, _instance, phase) {
+      onPostRender(node: HTMLElement, _instance: any, phase: string) {
         if (phase !== "unmount" && hasHighlightedContents(node)) {
           queueMicrotask(() => {
             setRenderedKey(cacheKey);

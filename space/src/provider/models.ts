@@ -122,20 +122,21 @@ export async function getModels(pid: string): Promise<Record<string, Model>> {
 /**
  * Static model catalog (fallback when models.dev fails).
  */
-export const PROVIDER_MODELS: Record<string, Model[]> = {
+export const PROVIDER_MODELS: Record<string,  Model[]> = {
   anthropic: [
-    toModel("anthropic", { id: "claude-sonnet-4-20250514", name: "Claude Sonnet 4", reasoning: true, attachment: true, cost: { input: 3, output: 15, cache_read: 0.3, cache_write: 3.75 }, limit: { context: 200000, output: 16000 } }),
-    toModel("anthropic", { id: "claude-opus-4-20250514", name: "Claude Opus 4", reasoning: true, attachment: true, cost: { input: 15, output: 75, cache_read: 1.5, cache_write: 18.75 }, limit: { context: 200000, output: 32000 } }),
-    toModel("anthropic", { id: "claude-3-5-haiku-20241022", name: "Claude 3.5 Haiku", attachment: true, cost: { input: 0.8, output: 4, cache_read: 0.08, cache_write: 1 }, limit: { context: 200000, output: 8192 } }),
+    toModel("anthropic", { id: "claude-sonnet-5-5", name: "Claude Sonnet 5.5", reasoning: true, attachment: true, cost: { input: 2, output: 10, cache_read: 0.2, cache_write: 4 }, limit: { context: 1000000, output: 128000 } }),
+    toModel("anthropic", { id: "claude-fable-5-1", name: "Claude Fable 5.1", reasoning: true, attachment: true, cost: { input: 10, output: 50, cache_read: 0.25, cache_write: 20 }, limit: { context: 1000000, output: 128000 } }),
+    toModel("anthropic", { id: "claude-haiku-4-5", name: "Claude Haiku 4.5", attachment: true, cost: { input: 1, output: 5, cache_read: 0.1, cache_write: 2 }, limit: { context: 200000, output: 64000 } }),
   ],
   openai: [
-    toModel("openai", { id: "gpt-4o", name: "GPT-4o", attachment: true, cost: { input: 2.5, output: 10 }, limit: { context: 128000, output: 16384 } }),
-    toModel("openai", { id: "gpt-4o-mini", name: "GPT-4o Mini", attachment: true, cost: { input: 0.15, output: 0.6 }, limit: { context: 128000, output: 16384 } }),
-    toModel("openai", { id: "o3", name: "o3", reasoning: true, cost: { input: 2, output: 8 }, limit: { context: 200000, output: 100000 } }),
+    toModel("openai", { id: "gpt-6-astra", name: "GPT-6 Astra", attachment: true, cost: { input: 10, output: 50, cache_read: 1, cache_write: 12.5 }, limit: { context: 1050000, output: 128000 } }),
+    toModel("openai", { id: "gpt-5.5", name: "GPT-5.5", attachment: true, cost: { input: 5, output: 30, cache_read: 0.5 }, limit: { context: 1050000, output: 128000 } }),
+    toModel("openai", { id: "gpt-6.1-sol", name: "GPT-6.1 Sol", attachment: true, cost: { input: 2, output: 10, cache_read: 0.2, cache_write: 2.5 }, limit: { context: 1050000, output: 128000 } }),
+    toModel("openai", { id: "gpt-5.4", name: "GPT-5.4", attachment: true, cost: { input: 2.5, output: 15, cache_read: 0.25 }, limit: { context: 1050000, output: 128000 } }),
   ],
   google: [
-    toModel("google", { id: "gemini-2.5-pro", name: "Gemini 2.5 Pro", reasoning: true, attachment: true, cost: { input: 1.25, output: 10, cache_read: 0.31 }, limit: { context: 1048576, output: 65536 } }),
-    toModel("google", { id: "gemini-2.5-flash", name: "Gemini 2.5 Flash", reasoning: true, attachment: true, cost: { input: 0.15, output: 0.6, cache_read: 0.03 }, limit: { context: 1048576, output: 65536 } }),
+    toModel("google", { id: "gemini-3.8-flash", name: "Gemini 3.8 Flash", reasoning: true, attachment: true, cost: { input: 0.75, output: 3.75, cache_read: 0.075 }, limit: { context: 1048576, output: 65536 } }),
+    toModel("google", { id: "gemini-3.7-flash", name: "Gemini 3.7 Flash", reasoning: true, attachment: true, cost: { input: 0.75, output: 3.75, cache_read: 0.075 }, limit: { context: 1048576, output: 65536 } }),
   ],
 }
 

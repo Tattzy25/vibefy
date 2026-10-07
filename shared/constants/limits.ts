@@ -7,7 +7,7 @@
  * Minimum Cloudflare AI Gateway balance required to use the service
  * If balance falls below this, user must add credits or use BYOK
  */
-export const MINIMUM_CLOUDFLARE_BALANCE = 2.0; // USD
+export const MINIMUM_CLOUDFLARE_BALANCE = 0; // USD
 
 /**
  * Cloudflare credits threshold below which the credits banner is shown.
