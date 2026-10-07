@@ -11,6 +11,7 @@
 		"skipLibCheck": true,
 		"noUncheckedIndexedAccess": false,
 		"baseUrl": ".",
+		"ignoreDeprecations": "6.0",
 		"paths": {
 			"worker/*": ["../worker/*"],
 			"shared/*": ["../shared/*"]
