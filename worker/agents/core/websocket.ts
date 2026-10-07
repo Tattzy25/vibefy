@@ -233,25 +233,6 @@ export async function handleWebSocketMessage(
                     if (limitResult.refreshedBlob) {
                         agent.setState({ ...agent.state, cloudflareToken: limitResult.refreshedBlob });
                     }
-
-                    if (!limitResult.allowed) {
-                        logger.warn('User suggestion blocked by usage check', {
-                            userId,
-                            reason: limitResult.reason,
-                            withinLimits: limitResult.withinLimits,
-                            remaining: limitResult.remaining,
-                            hasUserToken: limitResult.hasUserToken,
-                            balance: limitResult.balance,
-                        });
-                        
-                        // Send structured error for frontend to show as popup
-                        sendToConnection(connection, WebSocketMessageResponses.ERROR, {
-                            error: limitResult.reason,
-                            code: 'USAGE_LIMIT_EXCEEDED',
-                            showAsPopup: true,
-                        });
-                        return;
-                    }
                     
                 } catch (error) {
                     logger.error('Failed to check usage:', error);
