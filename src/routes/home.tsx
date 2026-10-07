@@ -207,7 +207,7 @@ export default function Home() {
 							<h1 className="w-full text-center text-[clamp(1.75rem,4.5vw,2.5rem)] font-semibold leading-[1.12] text-kumo-strong/80 z-20">
 								What should we{' '}
 								<span className="font-funky-mono font-bold text-[1.1em] tracking-tighter uppercase text-brand-emphasis">
-									build
+									VIBEFY
 								</span>{' '}
 								today?
 							</h1>
